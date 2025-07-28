@@ -1,0 +1,10 @@
+{
+  "name": "test-vulnerable",
+  "version": "1.0.0",
+  "description": "Test project with known vulnerable dependencies",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "4.17.10",
+    "express": "4.16.0"
+  }
+} 

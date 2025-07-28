@@ -1,0 +1,13 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "Test project for PatchFrame",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "4.17.15",
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+} 

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SecureCode</title>
+</head>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<body><svg width="800" height="500"></svg>
+
+<script>
+fetch('../dist/report.json').then(r=>r.json()).then(data=>{
+  const svg=d3.select("svg"), g=svg.selectAll("g").data(data).enter().append("g");
+  g.append("circle").attr("cx",(d,i)=>100+i*120).attr("cy",250).attr("r",40)
+   .attr("fill",d=>d.hits.length? "#e74c3c":"#2ecc71");
+  g.append("text").attr("x",(d,i)=>100+i*120).attr("y",255).attr("text-anchor","middle")
+   .attr("fill","#fff").text(d=>d.name);
+});
+</script>
+</html>
